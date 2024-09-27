@@ -29,8 +29,8 @@
 
             const data = await response.json();
             
-            document.getElementById('userCount').innerText = data.discord_user_install_count ?? 'N/A';
-            document.getElementById('serverCount').innerText = data.user_count ?? 'N/A';
+            document.getElementById('userCount').innerText = data.user_count ?? '0';
+            document.getElementById('serverCount').innerText = data.guild_count ?? '0';
 
             setTimeout(() => {
                 document.getElementById('countDisplay').style.opacity = 0.8;
